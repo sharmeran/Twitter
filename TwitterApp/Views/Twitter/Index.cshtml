@@ -1,0 +1,26 @@
+﻿
+
+@model List<TwitterApp.Models.TwitterEntity>
+
+@{
+    var tweets = Model;
+    
+}
+
+<div>
+    <ul>
+       
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    </ul>
+</div>
+
+<div>
+    @foreach (TwitterApp.Models.TwitterEntity t in tweets)
+    {
+        <h3>@t.ScreenName</h3>        
+        <p>@t.Tweet</p>
+    }
+</div>
+
+
+
